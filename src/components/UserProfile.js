@@ -2,7 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { FaEdit, FaCog, FaChartLine, FaShieldAlt, FaLeaf, FaGraduationCap } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { db } from '../firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { FaEdit, FaCog, FaChartLine, FaShieldAlt, FaLeaf, FaGraduationCap, FaStar } from 'react-icons/fa';
 
 const UserProfile = ({ user }) => {
   const [userListings, setUserListings] = useState([]);
