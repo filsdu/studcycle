@@ -10,16 +10,15 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "tailwindcss": "^3.4.1"
-"algoliasearch": "^4.22.0",
     "tailwindcss": "^3.4.1",
+    "algoliasearch": "^4.22.0",
     "postcss": "^8.4.38",
     "autoprefixer": "^10.4.19"
   },
   "scripts": {
     "start": "react-scripts start",
-     "build": "tailwindcss -i ./src/index.css -o ./src/App.css && react-scripts build",
-"test": "react-scripts test",
+    "build": "tailwindcss -i ./src/index.css -o ./src/App.css && react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
