@@ -3,12 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import CTA from './components/CTA';
-import Footer from './components/Footer';
 import ListingsPage from './components/ListingsPage';
-import CreateListing from './components/CreateListing';
-import UserProfile from './components/UserProfile';
 import Login from './components/Login';
 import './index.css';
 
@@ -34,19 +29,10 @@ function App() {
       <div className="min-h-screen bg-gray-50 dark:bg-dark-900 transition-colors duration-300">
         <Navbar user={user} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Features />
-              <CTA />
-            </>
-          } />
+          <Route path="/" element={<Hero />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/listings" element={<ListingsPage />} />
-          <Route path="/create-listing" element={<CreateListing user={user} />} />
-          <Route path="/profile" element={<UserProfile user={user} />} />
+          <Route path="/listings" element={<ListingsPage user={user} />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
